@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Comisión</title>
+    <link rel="stylesheet" href="sim_css.css">
+</head>
+<body>
+     <!-- Navegación -->
+     <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/img/logo_completo1.png" alt="Live Corredores de Seguro">
+                <span class="logo-text"></span>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio" data-text="Inicio">Inicio</a></li>
+                <li><a href="#seguros" data-text="Seguros">Seguros</a></li>
+                <li><a href="#nosotros" data-text="Nosotros">Nosotros</a></li>
+                <li><a href="#faq" data-text="FAQ">FAQ</a></li>
+                <li><a href="#contacto" class="cta-button">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tarjeta 1 -->
+    <div class="card">
+        <div class="card-title">Valores Mensuales</div>
+        <div class="row">
+            <div class="label">Fecha:</div>
+            <div class="value" id="current-date"></div>
+        </div>
+        <div class="row">
+            <div class="label">Valor UF al día:</div>
+            <div class="value"><input type="number" id="valor-uf" value="38914"></div>
+        </div>
+        <div class="row">
+            <div class="label">Valor Prima Bruta en UF:</div>
+            <div class="value"><input type="number" id="prima-bruta-uf" value="0"></div>
+        </div>
+        <div class="row">
+            <div class="label">Valor Prima Bruta en $:</div>
+            <div class="value"><input type="number" id="prima-bruta-pesos" value="0" ></div>
+        </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="card">
+        <div class="card-title">Valores Anuales</div>
+        <div class="row">            
+            <div class="label">Valor Prima Bruta UF Anual:</div>
+            <div class="value"><input type="number" id="prima-bruta-uf-anual" value="0"></div>
+        </div>
+        <div class="row">
+            <div class="label">Valor Prima Bruta $ Anual:</div>
+            <div class="value"><input type="number" id="prima-bruta-$-anual" value="0"></div>
+        </div>
+        <div class="row">
+            <div class="label">Valor Prima Neta UF Anual:</div>
+            <div class="value"><input type="number" id="prima-neta-uf-anual" value="0"></div>
+        </div>
+        <div class="row">
+            <div class="label">Valor Prima Neta $ Anual:</div>
+            <div class="value"><input type="number" id="prima-neta-pesos-anual" value="0" ></div>
+        </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="card">
+        <div class="card-title">Comisiones LIVE</div>
+        <div class="row">
+            <div class="label">% Comisión Prima Anual Neta:</div>
+            <div class="value"><input type="number" id="comision-prima-neta" value="0"></div>
+        </div>
+        <div class="row">
+            <div class="label">Valor UF Comisión:</div>
+            <div class="value"><input type="number" id="valor-uf-comision" value="0"></div>
+        </div>
+        <div class="row">
+            <div class="label">Valor $ Comisión:</div>
+            <div class="value"><input type="number" id="valor-pesos-comision" value="0" ></div>
+        </div>
+    </div>
+    <!-- Tarjeta 4 -->
+    <div class="card">
+        <div class="card-title">Comisiones Partners</div>
+        <div class="row">
+            <div class="label">% Comisión Prima Anual Neta:</div>
+            <div class="value"><input type="number" id="comision-prima-neta-part" value="0"></div>
+        </div>
+        <div class="row">
+            <div class="label">Valor UF Comisión:</div>
+            <div class="value"><input type="number" id="valor-uf-comision-part" value="0"></div>
+        </div>
+        <div class="row">
+            <div class="label">Valor $ Comisión:</div>
+            <div class="value"><input type="number" id="valor-pesos-comision-part" value="0" ></div>
+        </div>
+    </div>
+   
+   
+    <script src="sim_js.js"></script>
+</body>
+</html>
