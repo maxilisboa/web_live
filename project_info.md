@@ -1,5 +1,8 @@
 ﻿# Project Info: Web Seguros
 
+accesos:  https://cotizador-wiak.onrender.com
+
+
 ## Descripción del Proyecto
 - Sitio web corporativo para empresa de seguros
 - Incluirá integración futura con cotizador automático
