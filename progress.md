@@ -45,3 +45,82 @@ C:\Live\web_live\
 - [ ] Responsive design
 - [ ] Formulario de contacto
 - [ ] Tiempo de carga
+
+
+Estamos creando el login para comenzar con el cotizador on line
+
+este es el prompt:
+/*
+🤖 PROYECTO: BACKEND COTIZADOR DE SEGUROS CON LOGIN Y DASHBOARD PROTEGIDO
+
+OBJETIVO:
+Construir un backend en Node.js + Express con sistema de login por sesiones,
+rutas protegidas y un dashboard simple con links a otras herramientas (cotizador, simulador, comisiones).
+
+TECNOLOGÍAS:
+- Node.js
+- Express
+- express-session
+- body-parser
+- HTML + CSS básico para login y dashboard
+- Archivo plano JSON como base de datos de usuarios (sin base de datos real por ahora)
+- Preparado para deploy en Render.com (usar process.env.PORT)
+
+ESTRUCTURA DE CARPETAS ESPERADA:
+
+cotizador-backend/
+├── /routes/
+│   └── auth.js               # Maneja /auth/login y /auth/logout
+├── /middleware/
+│   └── authMiddleware.js     # Verifica sesión activa
+├── /users/
+│   └── usuarios.json         # Lista de usuarios autorizados
+├── /public/
+│   ├── login.html            # Formulario simple de login
+│   ├── dashboard.html        # Vista protegida con menú
+│   └── estilos.css           # (opcional)
+├── .gitignore
+├── package.json
+├── server.js
+└── README.md
+
+FUNCIONALIDADES A IMPLEMENTAR:
+
+1. Login por sesión:
+   - Formulario HTML POST a /auth/login
+   - Verifica email + contraseña contra usuarios.json
+   - Si son válidos, guarda req.session.user
+   - Si no, muestra mensaje de error
+
+2. Middleware de autenticación:
+   - Revisa que req.session.user exista
+   - Si no está logueado, redirige a /login
+
+3. Rutas:
+   - GET /login → devuelve login.html
+   - POST /auth/login → valida credenciales
+   - GET /dashboard → protegido, devuelve dashboard.html
+   - GET /auth/logout → destruye sesión y redirige a /login
+
+4. Usuario ejemplo para pruebas:
+   email: admin@cotizador.cl
+   password: 123456
+
+5. Archivo .gitignore debe ignorar node_modules/ y .env
+
+6. El sistema debe ser compatible con Render.com:
+   - Usar `process.env.PORT || 3000`
+   - No hardcodear el puerto
+
+7. Estilos opcionales en /public/estilos.css
+
+RESULTADO ESPERADO:
+- Cuando el usuario ingresa a /login y se loguea correctamente, accede a /dashboard
+- En dashboard.html debe haber links a:
+   - /cotizador.html
+   - /simulador.html
+   - /comisiones.html
+   - /auth/logout
+
+Copilot debe generar el backend completo basado en estas instrucciones.
+*/

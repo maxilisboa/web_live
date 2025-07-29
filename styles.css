@@ -17,14 +17,13 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
+    background: #f5f6fa;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 0px;
 }
 
 /* Navegación */
@@ -117,12 +116,16 @@ body {
     height: 100vh;
     position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
     color: var(--white);
     padding-top: 80px;
     overflow: hidden;
+    margin-top: 0;
+    margin-bottom: 32px;
+    height: auto;
 }
 
 .hero-parallax {
@@ -163,6 +166,8 @@ body {
     animation: fadeInUp 1s ease;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     text-align: left;
+    color: #4F46E5;
+    margin-bottom: 0.5rem;
 }
 
 .hero p {
@@ -171,6 +176,10 @@ body {
     animation: fadeInUp 1s ease 0.2s;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     text-align: left;
+    color: #fff;
+    font-size: 1.15rem;
+    margin-top: 0;
+    text-shadow: 1px 1px 4px #4F46E5;
 }
 
 .hero-logo {
@@ -497,6 +506,26 @@ body {
     }
 }
 
+@media (max-width: 900px) {
+    .sidebar-menu {
+        width: 60px;
+        padding-top: 16px;
+    }
+
+    .sidebar-links a {
+        padding: 12px 10px;
+        font-size: 0.95rem;
+    }
+
+    .sidebar-links a span {
+        display: none;
+    }
+
+    body {
+        margin-left: 60px;
+    }
+}
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -626,4 +655,123 @@ html, body {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
     background-color: #7544a3;
     color: var(--white);
+}
+
+/* Sidebar lateral */
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    background: #4F46E5;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32px;
+    z-index: 1000;
+}
+.sidebar-logo img {
+    width: 90px;
+    margin-bottom: 32px;
+}
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+.sidebar-links li {
+    width: 100%;
+}
+.sidebar-links a {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+}
+.sidebar-links a i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+.sidebar-links a:hover {
+    background: #372fa5;
+}
+
+.main-content {
+    padding: 32px;
+}
+
+.comisiones-section {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.comision-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 2rem 2.5rem;
+    min-width: 320px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.comision-card h2 {
+    margin-bottom: 1rem;
+    color: #4F46E5;
+}
+
+.comision-table {
+    margin-top: 1rem;
+}
+
+.comision-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.comision-header {
+    font-weight: bold;
+    background: #f3f4f6;
+}
+
+.comision-col {
+    flex: 1;
+    text-align: center;
+}
+
+.calculo-card input, .calculo-card button {
+    margin: 8px 0;
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.calculo-card button {
+    background: #4F46E5;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.calculo-card button:hover {
+    background: #372fa5;
+}
+
+#resultadoComision {
+    margin-top: 16px;
+    font-weight: 500;
+    color: #10B981;
 }
